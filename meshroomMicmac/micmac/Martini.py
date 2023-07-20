@@ -26,15 +26,15 @@ class Martini(node.MicmacNode):
         ),
         desc.BoolParam(
             name='Exe',
-            label='Exe',
+            label='Execute',
             description='If false, only print.', 
             value=True,
             uid=[0],
         ),
         desc.File(
             name='OriCalib',
-            label='Ori Calib',
-            description='Orientation for calibration.',
+            label='In Calibration Directory',
+            description='Orientation containing calibration.',
             value='',
             uid=[0],
         ),
@@ -54,7 +54,7 @@ class Martini(node.MicmacNode):
         ),
         desc.BoolParam(
             name='ExpTxt',
-            label='Exp Txt',
+            label='Tie Points In Txt',
             description='Is Homol in text format?.', 
             value=False,
             uid=[0],
@@ -82,7 +82,7 @@ class Martini(node.MicmacNode):
         ),
         desc.IntParam(
             name='QNbPtTrip',
-            label='Q Nb Pt Trip',
+            label='Quick mode: Max Nb of Triplets per Edge',
             description='Max num of triplets per edge (Quick mode).',
             value=8,
             range=(1, 20, 1),
@@ -90,7 +90,7 @@ class Martini(node.MicmacNode):
         ),
         desc.IntParam(
             name='NbTrip',
-            label='Nb Trip',
+            label='Min Nb of Points per Trip',
             description='Min num of points to calculate a triplet.',
             value=5,
             range=(1, 20, 1),
